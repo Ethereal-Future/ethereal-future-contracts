@@ -9,6 +9,9 @@ Veridian Contracts is an original Soroban workspace for recording transparent pr
 - Stores a project name, goal, owner, raised amount, and active flag.
 - Records positive contribution amounts after contributor authorization.
 - Allows the owner to pause or resume a project.
+- Allows the owner to update project metadata without lowering the goal below the amount already recorded.
+- Stores milestones and lets the owner add or complete them with auditable events.
+- Exposes project and milestone read methods for the backend indexer.
 - Emits `project`, `status`, and `contribution` events for indexers.
 
 ## Contract boundary
@@ -22,6 +25,10 @@ Frontend -> Backend read model -> Soroban RPC -> ProjectRegistry
                                       |
                                       +-> events -> indexer -> read model
 ```
+
+## Workspace initialization
+
+The root Cargo workspace is initialized with `contracts/project-registry` as its first member. The contract creates an empty milestone vector for every registered project, so indexers can query a stable project-plus-milestone shape from the first transaction.
 
 ## Roadmap
 
