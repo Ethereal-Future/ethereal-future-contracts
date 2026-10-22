@@ -1,6 +1,6 @@
-# Viridian Contracts
+# Veridian Contracts
 
-Viridian Contracts is an original Soroban workspace for recording transparent project goals and contribution commitments on Stellar. It stores public project state and emits events, while wallet UX, indexing, evidence, and payout policy remain separate concerns.
+Veridian Contracts is an original Soroban workspace for recording transparent project goals and contribution commitments on Stellar. It stores public project state and emits events, while wallet UX, indexing, evidence, and payout policy remain separate concerns.
 
 ## Current implementation: `ProjectRegistry`
 
