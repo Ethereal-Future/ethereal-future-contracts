@@ -1,0 +1,9 @@
+[workspace]
+members = ["contracts/project-registry"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+
+[workspace.dependencies]
+soroban-sdk = "23.0.0"
